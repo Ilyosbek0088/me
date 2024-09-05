@@ -87,7 +87,7 @@ button:focus
 
 }
 button
-{ display: flex;
+{ display: none;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -153,7 +153,7 @@ ol{
 }
 
 @media screen and (max-width:429px) {
-  nav{gap: 2%;}
+  nav{gap: 1%;}
   p{font-size: 35 px;}
   .ul{font-size: 15px;z-index: -1;}
   div{display: none;}
