@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Guerrilla&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body
+{background-color: black ;}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav
+{
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25%;
+  box-shadow: 0px 0px 40px 1px wheat;
+}
+.ul{ color:transparent;
+    display: flex;
+    gap :20px;
+    list-style: none;
+    font-family: "Protest Guerrilla", sans-serif;
+    text-shadow: 0px 0px 25px white;
+    -webkit-text-stroke: 1px white;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+li{
+    transition: all 0.4s;
+
+}
+li:hover
+{
+    transform: scale(1.05);
+}
+div 
+{   width: 60px;
+    height: 60px;
+    border: 5px white double;
+    box-shadow: 0px 0px 1px 1px white;   
+     border-radius: 15px;
+    transition: 1s;
+    background: radial-gradient(white,black,black,black);
+}
+div:hover
+{
+ 
+    transform: rotate(360deg);
+}
+p
+{
+    font-family: "Dancing Script", cursive;
+    font-weight: 900;
+    font-size: 50px;
+    color: transparent;
+    text-shadow: 0px 0px 25px white;
+    -webkit-text-stroke: 2px white;
+}
+button
+{   border: none;
+    background-color: transparent;
+    color: wheat;
+    transform: scale(2);
+    background-color: transparent;
+  width: 23px;
+  height: 23px;
+  display: none;
+}
+button:hover
+{
+  background-color: rgba(128, 128, 128, 0.605);
+  width: 23px;
+  height: px;
+  border-radius: 5px;
+}
+button:focus
+{
+    background-color: transparent;
+  border-radius: 5px;
+  border: wheat 1px solid;
+
+}
+button
+{ display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.i{
+  position: absolute;
+  display: none;
+}
+ol{
+  color:transparent;
+    display:none;
+    gap :20px;
+    list-style: none;
+    font-family: "Protest Guerrilla", sans-serif;
+    text-shadow: 0px 0px 25px white;
+    -webkit-text-stroke: 0.4px white;
+    font-weight: 900;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px double wheat;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+@media screen and (max-width:811px) {
+  nav{gap: 15%;}
+  p{font-size: 55px;}
+  .ul{font-size: 25px;}
+
+}
+
+@media screen and (max-width:376px) {
+  nav{gap: 2%;}
+  p{font-size: 30px;}
+  .ul{font-size: 15px;z-index: -1;}
+  div{display: none;}
+  button{display: block;
+    position: relative;
+  transform: scale(1.8);}
+  button:focus + .ul{z-index: 1;}
+  ol{display: block;position: absolute; left: -8vh;top:-20vh;}
+  button:focus ol{top: 6vh;}
+  button:focus .i{display: block;transform: scale(1.2);}
+  button:focus .b{display: none;width: 0;height: 0;}
+  button{display: flex; align-items: center;justify-content: center;}
+}
+
+@media screen and (max-width:415px) {
+  nav{gap: 2%;}
+  p{font-size: 30px;}
+  .ul{font-size: 15px;z-index: -1;}
+  div{display: none;}
+  button{display: block;
+    position: relative;
+  transform: scale(1.8);}
+  button:focus + .ul{z-index: 1;}
+  ol{display: block;position: absolute; left: -8vh;top:-20vh;}
+  button:focus ol{top: 6vh;}
+  button:focus .i{display: block;transform: scale(1.2);}
+  button:focus .b{display: none;width: 0;height: 0;}
+  button{display: flex; align-items: center;justify-content: center;}
+}
+
+@media screen and (max-width:429px) {
+  nav{gap: 2%;}
+  p{font-size: 35 px;}
+  .ul{font-size: 15px;z-index: -1;}
+  div{display: none;}
+  button{display: block;
+    position: relative;
+  transform: scale(1.8);}
+  button:focus + .ul{z-index: 1;}
+  ol{display: block;position: absolute; left: -8vh;top:-20vh;}
+  button:focus ol{top: 6vh;}
+  button:focus .i{display: block;transform: scale(1.2);}
+  button:focus .b{display: none;width: 0;height: 0;}
+  button{display: flex; align-items: center;justify-content: center;}
+}
+
+@media screen and (max-width:375px) {
+  nav{gap: 2%;}
+  p{font-size: 35 px;}
+  .ul{font-size: 15px;z-index: -1;}
+  div{display: none;}
+  button{display: block;
+    position: relative;
+  transform: scale(1.8);}
+  button:focus + .ul{z-index: 1;}
+  ol{display: block;position: absolute; left: -8vh;top:-20vh;}
+  button:focus ol{top: 6vh;}
+  button:focus .i{display: block;transform: scale(1.2);}
+  button:focus .b{display: none;width: 0;height: 0;}
+  button{display: flex; align-items: center;justify-content: center;}
+}
