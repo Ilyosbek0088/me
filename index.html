@@ -3,52 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Coconut</title>
     <link rel="stylesheet" href="style.css">
-    <title>Informal Icons</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row; /* Center vertically */
+            gap: 80px;
+            height: 100vh;
+            background: linear-gradient(135deg, #121212, #2c2c2c); /* Gradient background */
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: 0 0 10px black;
+            padding: 20px; /* Padding for overall content */
+            margin: 0; /* Remove default margin */
+            overflow: hidden;
+        }
+
+        #item {
+            width: 100%; /* Full width for smaller screens */
+            max-width: 430px; /* Limit max width */
+            height: 630px;
+            background-color: #f0e68c; /* Softer background color */
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7); /* Deeper shadow */
+            transition: transform 0.3s; /* Smooth hover effect */
+        }
+
+        #item:hover {
+            transform: translateY(-20px); /* Lift effect on hover */
+        }
+
+        #img {
+            background: no-repeat url(https://avatars.mds.yandex.net/get-altay/9954022/2a00000189065fc0c39f79a9dcdc865d90e5/XXL_height);
+            background-size: cover;
+            width: 100%;
+            height: 293px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Image shadow */
+        }
+
+        #title {
+            color: #333;
+            font-size: 21px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center; /* Center title */
+        }
+
+        #des {
+            text-align: center;
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 20px; /* Space below description */
+        }
+
+        #box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px; /* Space between buttons and count */
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for the box */
+        }
+
+        button {
+            background-color: #2c2c2c;
+            border: solid 4px white;
+            width: 60px; /* Smaller button size */
+            height: 60px;
+            -webkit-text-stroke: 1px white;
+            transition: 0.3s;
+            border-radius: 10px;
+            font-size: 30px; /* Adjusted for readability */
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Button shadow */
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background-color: white;
+            box-shadow: 0 0 10px white;
+            -webkit-text-stroke: 2px black;
+            color: black;
+        }
+
+        #thing {
+            font-size: 24px; /* Larger font for the count */
+            color: white; /* White text for visibility */
+        }
+
+        #div {
+            font-size: 20px; /* Adjusted font size */
+            color: white; /* White text for visibility */
+            border: 3px solid white;
+            border-radius: 10px;
+            padding: 5px;
+            background-color: black;
+        }
+
+        .order-button {
+            margin-top: 20px; /* Space above the order button */
+            background-color: #28a745; /* Green color for order button */
+            border: none;
+            border-radius: 10px;
+            color: white;
+            width: 100px;
+            height: 100px;
+            font-size: 24px; /* Adjusted font size */
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for order button */
+            transition: 0.3s;
+        }
+
+        .order-button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        /* Media Queries for Responsive Design */
+        @media screen and (max-width: 768px) {
+            body {
+                flex-direction: column; /* Stack elements vertically */
+                gap: 40px; /* Reduce gap */
+            }
+
+            #item {
+                height: auto; /* Allow height to be flexible */
+                padding: 10px; /* Reduce padding */
+            }
+
+            #title {
+                font-size: 18px; /* Smaller font size for title */
+            }
+
+            #des {
+                font-size: 14px; /* Smaller font for description */
+            }
+
+            #thing {
+                font-size: 20px; /* Smaller font for count */
+            }
+
+            #div {
+                font-size: 16px; /* Smaller font size */
+            }
+
+            button {
+                width: 50px; /* Smaller button size for mobile */
+                height: 50px;
+                font-size: 24px; /* Adjusted for readability */
+            }
+
+            .order-button {
+                font-size: 20px; /* Smaller order button */
+                padding: 10px 20px; /* Adjusted padding */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            #title {
+                font-size: 16px; /* Further decrease font size for very small screens */
+            }
+
+            #des {
+                font-size: 12px; /* Smaller font for description */
+            }
+
+            .order-button {
+                width: 80px; /* Smaller order button */
+                height: 80px; /* Smaller height */
+                font-size: 18px; /* Adjusted font size */
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="icon-container">
-        <div class="back-div">
-            <p>Instagram</p>
-            <i class="icon fa fa-instagram"></i>
-            <div class="div div-instagram"></div>
+    <div id="item">
+        <div id="img"></div>
+        <div id="title">Abdulaziz's Lavash - only 15,000 so'm</div>
+        <div id="des">It's awesome LAVASH!!! Named Abdulaziz's Shaurma and has a very amazing taste.
+            <b style="color:black;">ONLYYY!!! 9 LEFTTTT!!!</b>
+        </div>
+        <div id="box">
+            <div id="mini">
+                <button onclick="Plus()">+</button>
+                <b id="thing">0</b>
+                <button onclick="Minus()">-</button>
+            </div>
+            <div id="div">0 so'm</div>
         </div>
     </div>
-    <div class="icon-container">
-        <div class="back-div">
-            <p>Facebook</p>
-            <i class="icon fa fa-facebook"></i>
-            <div class="div div-facebook"></div>
-        </div>
-    </div>
-    <div class="icon-container">
-        <div class="back-div">
-            <p>WhatsApp</p>
-            <i class="icon fa fa-whatsapp"></i>
-            <div class="div div-whatsapp"></div>
-        </div>
-    </div>
-    <div class="icon-container">
-        <div class="back-div">
-            <p>Pinterest</p>
-            <i class="icon fa fa-pinterest"></i>
-            <div class="div div-pinterest"></div>
-        </div>
-    </div>
-    <div class="icon-container">
-        <div class="back-div">
-            <p>YouTube</p>
-            <i class="icon fa fa-youtube"></i>
-            <div class="div div-youtube"></div>
-        </div>
-    </div>
-    <div class="icon-container">
-        <div class="back-div">
-            <p>X</p>
-            <i class="icon fa fa-twitter"></i> <!-- Font Awesome не имеет иконки X, используйте Twitter -->
-            <div class="div div-x"></div>
-        </div>
-    </div>
+    <button class="order-button">Order Now</button>
+
+    <script>
+        let i = 0;
+        function Plus() {
+            if (i < 9) {
+                i++;
+                document.getElementById('thing').innerHTML = i;
+                document.getElementById('div').innerHTML = i * 15000 + " so'm";
+            } else {
+                document.getElementById('div').innerHTML = "There's only 9 left";
+                document.getElementById('div').style.color = 'red';
+            }
+        }
+        
+        function Minus() {
+            if (i > 0) {
+                i--;
+                document.getElementById('thing').innerHTML = i;
+                document.getElementById('div').innerHTML = i * 15000 + " so'm";
+                document.getElementById('div').style.color = 'white';
+            }
+        }
+    </script>
 </body>
 </html>
